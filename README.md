@@ -31,4 +31,11 @@ The final Dataset has **7,297** Rows and **11** Columns now
 - dropped columns which does not add any value like CLIENTNUM ,   Attrition_Flag and the Random_Numbers
 -  1 duplicate row was found which was then dropped
 
-## EDA
+## 2. EDA (Exploratory Data Analysis) 
+### Univariate Analysis
+1)  All the categorical variable like Martial Status , Card Category and payment on time were found unbalanced except the Gender variable
+    
+2)  Most(39%) of the Customers were found to be earning less than 30k and there are only 8% were found to be earning 111k+.
+4)  Average of the Customers were found to be 46 years approximately.
+5)  The histogram shows the distribution of credit limit that is positively skewed indicating higher number of customers have lower income and tells the direction of outlier towards the left.
+but theres a spike on the right end of the distribution which on further investigations shows that customers with higher income , is male cover the most part of the gold card holders  
