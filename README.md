@@ -26,8 +26,8 @@ The final Dataset has **7,297** Rows and **11** Columns now
 
 # ML Workflow
 ## 1. Data Cleaning
-- replace the null value `"NULL!"` with the numpy `nan`
-- dropped all rows with missing values
+- the dataset has represented the null values with the #NULL! , replaced was replaced  with nan so we can work with it
+- Total 217 null values were found whose row were dropped
 - dropped columns which does not add any value like CLIENTNUM ,   Attrition_Flag and the Random_Numbers
 -  1 duplicate row was found which was then dropped
 
