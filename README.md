@@ -38,4 +38,21 @@ The final Dataset has **7,297** Rows and **11** Columns now
 2)  Most(39%) of the Customers were found to be earning less than 30k and there are only 8% were found to be earning 111k+.
 4)  Average of the Customers were found to be 46 years approximately.
 5)  The histogram shows the distribution of credit limit that is positively skewed indicating higher number of customers have lower income and tells the direction of outlier towards the left.
-but theres a spike on the right end of the distribution which on further investigations shows that customers with higher income , is male cover the most part of the gold card holders  
+but theres a spike on the right end of the distribution which on further investigations shows that customers with higher income , is male cover the most part of the gold card holders
+
+### Multivariate Analysis
+1) Correlation Matrix for numerial values shows a positive high correlation (0.79)     between Customer_Age and Months_on_book(Number of months as credit card             customer) . the months_on_book increases as the customer_age increase so            multicollineraity present between both variable . hence , will use only one from    both.
+
+   Moreover, a negative moderate correlation (-0.48)  exist between                    Avg_utilization and Credit Limit which shows that with the increase in              avg_utilization ratio the Credit Limit for that customer decreases moderatly        and vice versa.(Inclusion of avg_utilization ratio variable will dpend on it's      significance added to the model)
+
+2) Categorical vs Numerical Values
+   - Gender vs Credit Limit : Male customers have higher median credit limit as          compared to females.
+   - Martial Status vs Credit Limit : median difference between different martial
+     is not huge
+   - Income Category vs Credit Limit : the income and credit limit is found to be        directly proportional to each other
+   - Card Category vs Credit Limit : median credit limit for gold card is much           higher than the blue card category
+   - Pay on time vs Credit Limit : no significant difference between the median
+     credit limit for both
+
+## Feature Engineering 
+
