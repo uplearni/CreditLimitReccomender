@@ -3,7 +3,7 @@ A machine learning project aimed to  predict an individual credit limit based on
 
 
 
-# About Dataset
+## About Dataset
 | Column Name      | Description                        |
 |------------------|------------------------------------|
 | `CLIENTNUM` | Client ID (not for analysing!) |
@@ -24,23 +24,23 @@ A machine learning project aimed to  predict an individual credit limit based on
 The final Dataset has **7,297** Rows and **11** Columns now
 
 
-# ML Workflow
-## 1. Data Cleaning
+## ML Workflow
+### 1. Data Cleaning
 - the dataset has represented the null values with the #NULL! , replaced was replaced  with nan so we can work with it
-- Total 217 null values were found whose row were dropped
-- dropped columns which does not add any value like CLIENTNUM ,   Attrition_Flag and the Random_Numbers
+- Total 217 null values were found and those rows were dropped
+- dropped columns which did not add any value like CLIENTNUM, Attrition_Flag and the Random_Numbers
 -  1 duplicate row was found which was then dropped
 
-## 2. EDA (Exploratory Data Analysis) 
-### Univariate Analysis
-1)  All the categorical variable like Martial Status , Card Category and payment on time were found unbalanced except the Gender variable
+### 2. EDA (Exploratory Data Analysis) 
+#### Univariate Analysis
+1)  All the categorical variable like Martial Status , Card Category and payment on time were found unbalanced except the Gender variable as there is only a slight difference
     
 2)  Most(39%) of the Customers were found to be earning less than 30k and there are only 8% were found to be earning 111k+.
-4)  Average of the Customers were found to be 46 years approximately.
-5)  The histogram shows the distribution of credit limit that is positively skewed indicating higher number of customers have lower income and tells the direction of outlier towards the left.
+3)  Average of the Customers were found to be 46 years approximately.
+4)  The histogram shows the distribution of credit limit that is positively skewed indicating higher number of customers have lower income and tells the direction of outlier towards the left.
 but theres a spike on the right end of the distribution which on further investigations shows that customers with higher income , is male cover the most part of the gold card holders
 
-### Multivariate Analysis
+#### Multivariate Analysis
 1) Correlation Matrix for numerial values shows a positive high correlation (0.79)     between Customer_Age and Months_on_book(Number of months as credit card             customer) . the months_on_book increases as the customer_age increase so            multicollineraity present between both variable . hence , will use only one from    both.
 
    Moreover, a negative moderate correlation (-0.48)  exist between                    Avg_utilization and Credit Limit which shows that with the increase in              avg_utilization ratio the Credit Limit for that customer decreases moderatly        and vice versa.(Inclusion of avg_utilization ratio variable will dpend on it's      significance added to the model)
@@ -54,5 +54,5 @@ but theres a spike on the right end of the distribution which on further investi
    - Pay on time vs Credit Limit : no significant difference between the median
      credit limit for both
 
-## Feature Engineering 
+### Feature Engineering 
 
