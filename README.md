@@ -41,18 +41,21 @@ The final Dataset has **7,297** Rows and **11** Columns now
 but theres a spike on the right end of the distribution which on further investigations shows that customers with higher income , is male cover the most part of the gold card holders
 
 #### Multivariate Analysis
-1) Correlation Matrix for numerial values shows a positive high correlation (0.79)     between Customer_Age and Months_on_book(Number of months as credit card             customer) . the months_on_book increases as the customer_age increase so            multicollineraity present between both variable . hence , will use only one from    both.
+1) Correlation Matrix for numerial values shows a positive high correlation (0.79)     between Customer_Age and Months_on_book(Number of months as credit card             customer) . the months_on_book increases as the customer_age increase so            multicollineraity present between both variable . hence , only one will be used from both.
 
    Moreover, a negative moderate correlation (-0.48)  exist between                    Avg_utilization and Credit Limit which shows that with the increase in              avg_utilization ratio the Credit Limit for that customer decreases moderatly        and vice versa.(Inclusion of avg_utilization ratio variable will dpend on it's      significance added to the model)
 
 2) Categorical vs Numerical Values
    - Gender vs Credit Limit : Male customers have higher median credit limit as          compared to females.
    - Martial Status vs Credit Limit : median difference between different martial
-     is not huge
+     is not huge with the median value of single(4511.0),married(4138.5) and divorced(4701.0), inspite of imbalanced number of customers belonging to different marital status
    - Income Category vs Credit Limit : the income and credit limit is found to be        directly proportional to each other
    - Card Category vs Credit Limit : median credit limit for gold card is much           higher than the blue card category
    - Pay on time vs Credit Limit : no significant difference between the median
      credit limit for both
 
 ### Feature Engineering 
+1) The histogram of the credit limit in the univariate analysis showed the presence of outliers on either sides of the distribution, thus these outliers needs to be removed. The technique used in this project is called trimming. After trimming 1% of the total data from both the sides, a decrease in the skewness can also be seen.
+2) Encoded the categorical variables
 
+### Model Training and Evaluation
